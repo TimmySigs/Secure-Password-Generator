@@ -30,6 +30,21 @@ function writePassword() {
     var passwordLength = (prompt("How many characters would you like to use (8-128)"));
   }
 
+var passwordString = "";
+
+if (lowerA) {
+  passwordString += lower;
+}
+if (upperA) {
+  passwordString += upper;
+}
+if (numberA) {
+  passwordString += number;
+}
+if (specialA) {
+  passwordString += special;
+}
+
 
 var password = generatePassword();
 var passwordText = document.querySelector("#password");
