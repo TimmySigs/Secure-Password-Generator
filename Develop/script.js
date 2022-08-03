@@ -45,14 +45,18 @@ if (specialA) {
   passwordString += special;
 }
 
+var newPassword = "";
 
-var password = generatePassword();
-var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+for (var i =1; <= passwordLength; i++) {
+  newPassword += passwordString.charAt(Math.floor(Math.random() * passwordString.length));
 }
-function generatePassword(lower, upper, number, special) {
+
+passwordText.value = newPassword;
+
+// var password = generatePassword();
+// var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
 
 }
 
