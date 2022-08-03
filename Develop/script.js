@@ -23,6 +23,13 @@ function writePassword() {
 
   }
 
+  var passwordLength = (prompt("How many characters would you like to use (8-128)"));
+
+  while (passwordLength <=9 || >= 129) {
+    alert("Password must be between 8 to 128 characters")
+    var passwordLength = (prompt("How many characters would you like to use (8-128)"));
+  }
+
 
 var password = generatePassword();
 var passwordText = document.querySelector("#password");
