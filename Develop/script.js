@@ -57,10 +57,20 @@ for (var i = 1; i <= passwordLength; i++) {
   newPassword += passwordString.charAt(Math.floor(Math.random() * passwordString.length));
 }
 
+var passArr = newPassword.split("")
+var gtdArr = gtdchar.split("")
+
+
+for (var i = 0; i < gtdArr.length; i++) {
+  passArr[i] = gtdArr[i]
+}
+
+var finalPassword = passArr.join("")
+
 // var password = generatePassword();
 var passwordText = document.querySelector("#password");
 
-passwordText.value = newPassword;
+passwordText.value = finalPassword;
 
 
 console.log(newPassword)
